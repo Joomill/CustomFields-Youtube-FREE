@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams">
+		<fieldset 
+			name="fieldparams" 
+			addfieldpath="/plugins/fields/youtube/elements"
+		>
+		
+			<field
+				name="video_width"
+				type="text"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_VIDEO_WIDTH_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_VIDEO_WIDTH_DESC"
+				size="40"
+				default="100%"
+			/>
+			
+			<field
+				name="video_height"
+				type="text"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_VIDEO_HEIGHT_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_VIDEO_HEIGHT_DESC"
+				size="40"
+			/>
+		
+			<field
+				name="responsive"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_MODE_RESPONSIVE"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_MODE_DESC"
+			/>
+			
+			<field
+				name="align"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_ALIGN_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_ALIGN_DESC"
+			/>
+					
+			<field
+				name="autoplay"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_AUTOPLAY_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_AUTOPLAY_DESC"
+			/>
+						
+			<field
+				name="controls"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_CONTROLS_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_CONTROLS_DESC"
+			/>
+			
+			<field
+				name="color"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_COLOR_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_COLOR_DESC"
+			/>
+			
+			<field
+				name="modestbranding"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_MODESTBRANDING_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_MODESTBRANDING_DESC"
+			/>
+			
+			<field
+				name="fullscreen"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_FULLSCREEN_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_FULLSCREEN_DESC"
+			/>
+	
+			<field
+				name="rel"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_REL_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_REL_DESC"
+			/>
+			
+			<field
+				name="showinfo"
+				type="pro"
+				label="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_LABEL"
+				description="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_DESC"
+			/>
+			
+		</fieldset>
+	</fields>
+</form>

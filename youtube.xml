@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="fields" method="upgrade">
+	<name>plg_fields_youtube</name>
+	<author>Joomill Extensions</author>
+	<creationDate>2017-04-28</creationDate>
+	<copyright>Copyright (C) 2017 Joomill. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@joomill-extensions.com</authorEmail>
+	<authorUrl>https://www.joomill-extensions.com</authorUrl>
+	<version>1.1.0</version>
+	<description>This plugin lets you create new fields for 'Youtube videos' in any extensions where custom fields are supported.</description>
+	
+	<files>
+		<filename plugin="youtube">youtube.php</filename>
+		<filename>script.php</filename>
+		<folder>elements</folder>
+		<folder>params</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_fields_youtube.ini</language>
+		<language tag="en-GB">en-GB.plg_fields_youtube.sys.ini</language>
+	</languages>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>		
+		<server type="extension" priority="1" name="Custom Fields - Youtube Update"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=11]]></server>	
+	</updateservers>
+</extension>
