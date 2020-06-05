@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Localhost FREE">
     <serverData>
       <paths name="Joomla 3 FREE">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="plugins\fields\youtube" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="administrator\language\en-GB" local="$PROJECT_DIR$/language" />
           </mappings>
         </serverdata>
       </paths>
@@ -19,7 +20,8 @@
       <paths name="Joomla 4 FREE">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="plugins\fields\youtube" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="administrator\language\en-GB" local="$PROJECT_DIR$/language" />
           </mappings>
         </serverdata>
       </paths>
@@ -31,5 +33,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

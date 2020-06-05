@@ -85,6 +85,11 @@
 				label="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_LABEL"
 				description="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_DESC"
 			/>
+
+			<field
+				name=""
+				type="upgrade"
+			/>
 			
 		</fieldset>
 	</fields>
