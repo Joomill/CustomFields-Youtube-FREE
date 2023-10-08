@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Custom Fields - Youtube plugin - FREE Version
- *  copyright: Copyright (c) 2021. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -44,9 +44,11 @@ class plgFieldsYoutubeInstallerScript
      */
     public function preflight($type, $parent): bool
     {
-        if ($type !== 'uninstall') {
+        if ($type !== 'uninstall')
+        {
             // Check for the minimum PHP version before continuing
-            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
+            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<'))
+            {
                 Log::add(
                     Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
                     Log::WARNING,
@@ -55,7 +57,8 @@ class plgFieldsYoutubeInstallerScript
                 return false;
             }
             // Check for the minimum Joomla version before continuing
-            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
+            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<'))
+            {
                 Log::add(
                     Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
                     Log::WARNING,
