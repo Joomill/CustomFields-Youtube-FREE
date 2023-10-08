@@ -54,6 +54,6 @@
 	</changelogurl>
 
 	<updateservers>
-		<server type="extension" priority="1" name="Custom Fields - Youtube PRO"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=11]]></server>
+		<server type="extension" priority="1" name="Custom Fields - Youtube FREE"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=11]]></server>
 	</updateservers>
 </extension>
