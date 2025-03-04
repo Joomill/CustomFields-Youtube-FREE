@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 
 //add stylesheet for responsive container
-$document = Factory::getDocument();
+$document = Factory::getApplication()->getDocument();
 $value    = $field->value;
 $width    = $fieldParams->get('video_width');
 $height   = $fieldParams->get('video_height');
