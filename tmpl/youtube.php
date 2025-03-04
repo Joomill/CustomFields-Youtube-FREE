@@ -14,9 +14,9 @@ use Joomla\CMS\Factory;
 
 //add stylesheet for responsive container
 $document = Factory::getDocument();
-$value = $field->value;
-$width = $fieldParams->get('video_width');
-$height = $fieldParams->get('video_height');
+$value    = $field->value;
+$width    = $fieldParams->get('video_width');
+$height   = $fieldParams->get('video_height');
 
 if ($value == '')
 {
