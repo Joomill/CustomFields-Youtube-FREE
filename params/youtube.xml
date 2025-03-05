@@ -3,7 +3,7 @@
     <fields name="fieldparams">
         <fieldset
                 name="fieldparams"
-                addfieldpath="/plugins/fields/youtube/elements"
+                addfieldprefix="Joomill\Plugin\Fields\Youtube\Field"
         >
 
             <field
