@@ -9,11 +9,10 @@
 
 namespace Joomill\Plugin\Fields\Youtube\Extension;
 
-use Joomla\Component\Fields\Administrator\Plugin\FieldsPlugin;
-
-// phpcs:disable PSR1.Files.SideEffects
+// No direct access.
 \defined('_JEXEC') or die;
-// phpcs:enable PSR1.Files.SideEffects
+
+use Joomla\Component\Fields\Administrator\Plugin\FieldsPlugin;
 
 /**
  * Fields Text Plugin
