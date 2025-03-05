@@ -21,7 +21,7 @@ class JFormFieldPRO extends ListField
 
 	protected function getInput()
 	{
-		$text = Text::_('PLG_FIELDS_YOUTUBE_PARAMS_PRO_ONLY');
+		$text = Text::_('PLG_FIELDS_YOUTUBE_PRO_ONLY');
 
 		return
 			'<code>' . $text . '</code>';
