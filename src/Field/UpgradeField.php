@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Custom Fields - Youtube plugin - FREE Version
- *  copyright: Copyright (c) 2025. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2026. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -23,7 +23,7 @@ class UpgradeField extends FormField
 		$text = Text::_('PLG_FIELDS_YOUTUBE_FREE_VERSION');
 
 		return
-			'<div class="alert alert-warning text-center small">' . $text . '<br/> 
+			'<div class="alert alert-warning text-center small">' . $text . '<br/>
 			 <a class="btn btn-success btn-sm text-white mt-3" target="_blank" href="https://www.joomill-extensions.com/extensions/custom-fields-plugins">Custom Fields PRO</a></div>';
 	}
 }
