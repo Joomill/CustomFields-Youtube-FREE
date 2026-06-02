@@ -29,3 +29,46 @@
     top: 0;
     width: 100%;
 }
+
+/* Click-to-play facade */
+.youtube-facade {
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.classic-container .youtube-facade {
+    aspect-ratio: 16 / 9;
+}
+
+.responsive-container .youtube-facade {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.youtube-facade-play {
+    border-radius: 14%;
+    height: 48px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color .2s;
+    width: 68px;
+    background: rgba(33, 33, 33, .8) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M8 5v14l11-7z'/%3E%3C/svg%3E") no-repeat center / 50%;
+}
+
+.youtube-facade:hover .youtube-facade-play,
+.youtube-facade:focus .youtube-facade-play {
+    background-color: #f00;
+}

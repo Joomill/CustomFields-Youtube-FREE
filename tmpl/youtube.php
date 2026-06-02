@@ -7,19 +7,44 @@
  */
 
 // No direct access.
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
-use Joomla\CMS\Factory;
+/** @var \Joomla\Component\Fields\Administrator\Plugin\FieldsPlugin $this */
 
-//add stylesheet for responsive container
-$document = Factory::getApplication()->getDocument();
-$value    = $field->value;
-$width    = $fieldParams->get('video_width');
-$height   = $fieldParams->get('video_height');
+$raw = trim((string) $field->value);
 
-if ($value == '')
-{
-	return;
+if ($raw === '') {
+    return;
 }
 
-echo '<iframe width="' . $width . '" height="' . $height . '" src="https://www.youtube.com/embed/' . $value . '" frameborder="0" allowfullscreen></iframe>';
+// Resolve the YouTube video ID from a plain ID or any common YouTube URL
+// (watch?v=, youtu.be/, /embed/, /shorts/, /live/).
+$id = '';
+
+if (preg_match('~^[A-Za-z0-9_-]{11}$~', $raw)) {
+    $id = $raw;
+} elseif (preg_match('~(?:youtu\.be/|youtube(?:-nocookie)?\.com/(?:watch\?(?:.*&)?v=|embed/|shorts/|live/|v/))([A-Za-z0-9_-]{11})~i', $raw, $m)) {
+    $id = $m[1];
+}
+
+if ($id === '') {
+    return;
+}
+
+// Player parameters (only the dimensions and privacy mode are functional in FREE).
+$width  = htmlspecialchars((string) $fieldParams->get('video_width', '100%'), ENT_QUOTES);
+$height = htmlspecialchars((string) $fieldParams->get('video_height', ''), ENT_QUOTES);
+
+// Privacy-enhanced mode: serve the embed from youtube-nocookie.com so YouTube
+// does not store cookies / tracking information until the visitor plays the video.
+$host = (int) $fieldParams->get('nocookie', 0) === 1
+    ? 'https://www.youtube-nocookie.com'
+    : 'https://www.youtube.com';
+
+$src = $host . '/embed/' . $id;
+
+echo '<iframe src="' . htmlspecialchars($src, ENT_QUOTES) . '"'
+    . ' width="' . $width . '" height="' . $height . '"'
+    . ' style="border:0;" loading="lazy"'
+    . ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"'
+    . ' allowfullscreen title="YouTube video player"></iframe>';

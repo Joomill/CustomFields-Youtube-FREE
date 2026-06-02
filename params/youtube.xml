@@ -24,10 +24,29 @@
             />
 
             <field
+                    name="nocookie"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_NOCOOKIE_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_NOCOOKIE_DESC"
+                    default="0"
+            >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
                     name="responsive"
                     type="pro"
                     label="PLG_FIELDS_YOUTUBE_PARAMS_MODE_RESPONSIVE"
                     description="PLG_FIELDS_YOUTUBE_PARAMS_MODE_DESC"
+            />
+
+            <field
+                    name="lite"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_LITE_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_LITE_DESC"
             />
 
             <field
@@ -42,6 +61,13 @@
                     type="pro"
                     label="PLG_FIELDS_YOUTUBE_PARAMS_AUTOPLAY_LABEL"
                     description="PLG_FIELDS_YOUTUBE_PARAMS_AUTOPLAY_DESC"
+            />
+
+            <field
+                    name="mute"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_MUTE_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_MUTE_DESC"
             />
 
             <field
@@ -80,10 +106,38 @@
             />
 
             <field
-                    name="showinfo"
+                    name="captions"
                     type="pro"
-                    label="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_LABEL"
-                    description="PLG_FIELDS_YOUTUBE_PARAMS_SHOWINFO_DESC"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_CAPTIONS_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_CAPTIONS_DESC"
+            />
+
+            <field
+                    name="playsinline"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_PLAYSINLINE_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_PLAYSINLINE_DESC"
+            />
+
+            <field
+                    name="loop"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_LOOP_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_LOOP_DESC"
+            />
+
+            <field
+                    name="start"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_START_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_START_DESC"
+            />
+
+            <field
+                    name="end"
+                    type="pro"
+                    label="PLG_FIELDS_YOUTUBE_PARAMS_END_LABEL"
+                    description="PLG_FIELDS_YOUTUBE_PARAMS_END_DESC"
             />
 
             <field
