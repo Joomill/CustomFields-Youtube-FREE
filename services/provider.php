@@ -17,29 +17,36 @@ use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
 
 return new class () implements ServiceProviderInterface {
-	/**
-	 * Registers the service provider with a DI container.
-	 *
-	 * @param   Container  $container  The DI container.
-	 *
-	 * @return  void
-	 *
-	 * @since   4.3.0
-	 */
-	public function register(Container $container)
-	{
-		$container->set(
-			PluginInterface::class,
-			function (Container $container) {
-				$subject = $container->get(DispatcherInterface::class);
-				$plugin  = new Youtube(
-					$subject,
-					(array) PluginHelper::getPlugin('fields', 'youtube')
-				);
-				$plugin->setApplication(Factory::getApplication());
+    /**
+     * Registers the service provider with a DI container.
+     *
+     * @param   Container  $container  The DI container.
+     *
+     * @return  void
+     *
+     * @since   4.3.0
+     */
+    public function register(Container $container): void
+    {
+        $factory = function (Container $container): PluginInterface {
+            $subject = $container->get(DispatcherInterface::class);
+            $plugin  = new Youtube(
+                $subject,
+                (array) PluginHelper::getPlugin('fields', 'youtube')
+            );
+            $plugin->setApplication(Factory::getApplication());
 
-				return $plugin;
-			}
-		);
-	}
+            return $plugin;
+        };
+
+        // Lazy plugin loading exists from Joomla 6.1 (joomla/di 3.1.0) and builds the
+        // plugin on demand when its event is dispatched (PHP >= 8.4 lazy proxy). On
+        // Joomla 5.x / 6.0 the method is absent, so fall back to the plain factory.
+        $container->set(
+            PluginInterface::class,
+            method_exists($container, 'lazy')
+                ? $container->lazy(Youtube::class, $factory)
+                : $factory
+        );
+    }
 };
