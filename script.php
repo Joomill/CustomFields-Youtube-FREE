@@ -214,7 +214,6 @@ class plgFieldsYoutubeInstallerScript implements InstallerScriptInterface
         echo '<br>';
         echo '<h3>' . Text::_('PLG_FIELDS_YOUTUBE_INSTALL_QUICKSTART') . ':</h3>';
         echo '<ul>';
-        echo '<li><a style="text-decoration: underline;" href="index.php?option=com_plugins&view=plugins&filter[folder]=fields&filter[element]=youtube" target="_blank">' . Text::_('PLG_FIELDS_YOUTUBE_INSTALL_CONFIGURATION') . '</a></li>';
         echo '<li><a style="text-decoration: underline;" href="https://www.joomill-extensions.com/documentation/custom-fields-plugins/youtube-configuration" target="_blank">' . Text::_('PLG_FIELDS_YOUTUBE_INSTALL_NEEDHELP') . '</a></li>';
         echo '</ul>';
         echo '<hr>';
