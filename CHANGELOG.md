@@ -3,8 +3,6 @@
 All notable changes to the Extension are documented in this file.
 
 ## TODO
-- Update: restyled the FREE upgrade notice on the config screen to a single inline success alert.
-- Update: modernized the "pro" upsell form field to a namespaced ProField that renders a PRO badge linking to the upgrade page (replaces the legacy elements/pro.php).
 - Addition: help buttons now link to the Joomill documentation page
 - Addition: Support Plugin lazy loading for PHP >= 8.4: Added a possibility to load plugin class on demand (lazy loading) when the event dispatched. For servers with PHP version >= 8.4.
 - Check other updates in the past: https://github.com/joomla/Manual/tree/main/updates

@@ -20,10 +20,6 @@ class UpgradeField extends FormField
 
 	protected function getInput()
 	{
-		$text = Text::_('PLG_FIELDS_YOUTUBE_FREE_VERSION');
-
-		return
-			'<div class="alert alert-warning text-center small">' . $text . '<br/>
-			 <a class="btn btn-success btn-sm text-white mt-3" target="_blank" href="https://www.joomill-extensions.com/extensions/custom-fields-plugins">Custom Fields PRO</a></div>';
+		return Text::_('PLG_FIELDS_YOUTUBE_UPGRADE_DESC');
 	}
 }
