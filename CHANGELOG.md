@@ -2,6 +2,9 @@
 
 All notable changes to the Extension are documented in this file.
 
+## 5.3.2 - Unreleased
+- Improvement: PHP file headers updated to the standard Joomla docblock copyright format; code style only, no functional changes
+
 ## TODO
 - Roadmap (coming months, see vault note customfields-roadmap):
 - Addition: GDPR consent facade, load the video only after the visitor clicks (PRO)
