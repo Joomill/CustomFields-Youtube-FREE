@@ -9,7 +9,9 @@
  */
 
 // No direct access.
+// phpcs:disable PSR1.Files.SideEffects
 defined('_JEXEC') or die;
+// phpcs:enable PSR1.Files.SideEffects
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Http\HttpFactory;
@@ -28,6 +30,7 @@ use Joomla\Filesystem\File;
  *
  * @since  5.2.0
  */
+// phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps -- Joomla installer script: global class with the manifest-mandated name
 class plgFieldsYoutubeInstallerScript implements InstallerScriptInterface
 {
     /**
@@ -402,7 +405,7 @@ class plgFieldsYoutubeInstallerScript implements InstallerScriptInterface
             Log::add('YouTube: could not install the Joomill Update Logging plugin: ' . $e->getMessage(), Log::WARNING, 'youtube');
         }
     }
-
 }
 
+// phpcs:disable PSR1.Files.SideEffects -- the returned instance is required for the InstallerScriptInterface path
 return new plgFieldsYoutubeInstallerScript();
