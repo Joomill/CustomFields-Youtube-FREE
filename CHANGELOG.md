@@ -9,7 +9,7 @@ All notable changes to the Extension are documented in this file.
 ## TODO
 - Roadmap (coming months, see vault note customfields-roadmap):
 - Addition: GDPR consent facade, load the video only after the visitor clicks (PRO)
-- Addition: playlist and Shorts support (PRO)
+- Addition: playlist support (PRO)
 - Addition: VideoObject (JSON-LD) structured data for SEO (PRO)
 - Addition: optional caption below the video (FREE)
 - Addition: Support Plugin lazy loading for PHP >= 8.4: Added a possibility to load plugin class on demand (lazy loading) when the event dispatched. For servers with PHP version >= 8.4.
